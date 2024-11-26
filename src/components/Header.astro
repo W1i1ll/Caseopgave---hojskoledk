@@ -1,5 +1,53 @@
 ---
+import logo from "../assets/images/logo.svg";
+import { Image } from "astro:assets";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div
+  class="flex items-center justify-between px-4 py-2 text-black absolute top-2 left-0 w-full z-10"
+>
+  <div id="logo" class="flex-none">
+    <a href="/">
+      <Image src={logo} alt="Højskolen logo" class="h-auto w-auto" />
+    </a>
+  </div>
+
+  <div class="flex items-center space-x-6">
+    <nav class="hidden md:flex space-x-6 mr-5">
+      <a href="#" class="hover:text-[#FF5A01]">Højskoleophold</a>
+      <a href="#" class="hover:text-[#FF5A01]">Sommerhøjskole</a>
+      <a href="#" class="hover:text-[#FF5A01]">Priser</a>
+      <a href="#" class="hover:text-[#FF5A01]">Tilmeld</a>
+      <a href="#" class="hover:text-[#FF5A01]">Infomøder</a>
+      <a href="#" class="hover:text-[#FF5A01]">Om os</a>
+    </nav>
+
+    <a
+      href="#"
+      class="bg-[#FF5A01] gantari text-white px-6 py-5 rounded-[30px] hover:bg-[#FF772E] font-bold flex items-center justify-center"
+      >Tilmeld ophold</a
+    >
+  </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('nav a[href^="#"]');
+
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const targetId = link.getAttribute("href");
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+  });
+</script>
