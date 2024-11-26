@@ -1,0 +1,30 @@
+---
+import herovideo from "../assets/images/herovideo.mp4";
+---
+
+<div class="relative w-full h-screen">
+  <video
+    src={herovideo}
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay
+    muted
+    loop></video>
+
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+
+  <div
+    class="relative z-10 flex items-center justify-center h-full text-white flex-col"
+  >
+    <h1 class="text-4xl font-bold">HØJSKOLE I UDLANDET</h1>
+    <h2 class="mt-4 m-12 text-xl poppins-bold text-[20px]">
+      Eventyrlige højskoleophold i udlandet for unge
+    </h2>
+
+    <a
+      href="#"
+      class="block bg-[#FF5A01] text-white px-6 py-3 rounded-[30px] hover:bg-[#FF772E] font-bold md:hidden"
+    >
+      Tilmeld ophold
+    </a>
+  </div>
+</div>

@@ -6,13 +6,16 @@ import { Image } from "astro:assets";
 <div
   class="flex items-center justify-between px-4 py-2 text-black absolute top-2 left-0 w-full z-10"
 >
+  <!-- Logo -->
   <div id="logo" class="flex-none">
     <a href="/">
       <Image src={logo} alt="Højskolen logo" class="h-auto w-auto" />
     </a>
   </div>
 
+  <!-- Navigation og burger-menu -->
   <div class="flex items-center space-x-6">
+    <!-- Desktop navigation -->
     <nav class="hidden md:flex space-x-6 mr-5">
       <a href="#" class="hover:text-[#FF5A01]">Højskoleophold</a>
       <a href="#" class="hover:text-[#FF5A01]">Sommerhøjskole</a>
@@ -22,31 +25,70 @@ import { Image } from "astro:assets";
       <a href="#" class="hover:text-[#FF5A01]">Om os</a>
     </nav>
 
+    <!-- Desktop "Tilmeld ophold"-knap -->
     <a
       href="#"
-      class="bg-[#FF5A01] gantari text-white px-6 py-5 rounded-[30px] hover:bg-[#FF772E] font-bold flex items-center justify-center"
-      >Tilmeld ophold</a
+      class="hidden md:block bg-[#FF5A01] text-white px-6 py-3 rounded-[30px] hover:bg-[#FF772E] font-bold"
     >
+      Tilmeld ophold
+    </a>
+
+    <!-- Burger-menu for mobile -->
+    <button
+      id="burger-menu"
+      class="block md:hidden text-black focus:outline-none ml-4"
+      aria-label="Toggle navigation"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="white"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
   </div>
+</div>
+
+<!-- Mobilmenu -->
+<div
+  id="mobile-menu"
+  class="hidden absolute top-0 left-0 w-full h-full bg-white shadow-md p-4 space-y-4 z-20"
+>
+  <a href="#" class="block hover:text-[#FF5A01]">Højskoleophold</a>
+  <a href="#" class="block hover:text-[#FF5A01]">Sommerhøjskole</a>
+  <a href="#" class="block hover:text-[#FF5A01]">Priser</a>
+  <a href="#" class="block hover:text-[#FF5A01]">Tilmeld</a>
+  <a href="#" class="block hover:text-[#FF5A01]">Infomøder</a>
+  <a href="#" class="block hover:text-[#FF5A01]">Om os</a>
+  <a
+    href="#"
+    class="block bg-[#FF5A01] text-white px-6 py-3 rounded-[30px] hover:bg-[#FF772E] font-bold"
+  >
+    Tilmeld ophold
+  </a>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('nav a[href^="#"]');
+    const burgerMenu = document.getElementById("burger-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
 
+    burgerMenu.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden"); // Toggle visibility
+    });
+
+    // Hide mobile menu when a link is clicked
+    const links = mobileMenu.querySelectorAll("a");
     links.forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const targetId = link.getAttribute("href");
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
+      link.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden"); // Close menu on click
       });
     });
   });
