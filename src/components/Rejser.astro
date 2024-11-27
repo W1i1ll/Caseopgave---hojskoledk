@@ -1,49 +1,66 @@
 ---
 import { Image } from "astro:assets";
 import tucan from "../assets/images/tucan.jpg";
-
 import vandfald from "../assets/images/vandfald.jpg";
 import strandhotel from "../assets/images/strandhotel.jpg";
 import by from "../assets/images/by.jpg";
 ---
 
 <div
-  class="relative w-full bg-gradient-to-br from-[#FC9330] via-[#FFC895] to-[#FFC895] p-8"
+  class="w-full bg-gradient-to-br from-[#FC9330] via-[#FFC895] to-[#FFC895] p-9"
 >
-  <h1 class="text-[32px] text-center mt-[35px] text-black">Vores rejser</h1>
-  <Image
-    src={tucan}
-    alt="Plastic Change logo"
-    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
-  />
-  <p class="poppins text-center text-[24px] mt-[20px]">
-    CARIBIEN, HAWAII & MEXICO
-  </p>
+  <h1 class="text-[32px] text-center text-black knewave md:text-[50px]">
+    Vores rejser
+  </h1>
 
-  <Image
-    src={vandfald}
-    alt="Plastic Change logo"
-    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
-  />
-  <p class="poppins text-center text-[24px] mt-[20px]">
-    AUSTRALIEN, NZ, BALI & GILI ISLANDS
-  </p>
+  <!-- Grid layout for billeder -->
+  <div class="md:grid grid-cols-4 gap-8 mt-[20px] mb-[50px]">
+    <!-- Første billede (Tucan) -->
+    <div class="text-center">
+      <Image
+        src={tucan}
+        alt="En tucan"
+        class="rounded-[30px] w-[300px] h-[600px] object-cover mt-[50px]"
+      />
+      <p class="poppins-light text-center text-[24px] mt-[20px] md:text-[18px]">
+        CARIBIEN, HAWAII & MEXICO
+      </p>
+    </div>
 
-  <Image
-    src={strandhotel}
-    alt="Plastic Change logo"
-    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
-  />
-  <p class="poppins text-center text-[24px] mt-[20px]">
-    COSTA RICA, MEXICO & COLOMBIA
-  </p>
+    <!-- Andet billede (Vandfald) -->
+    <div class="text-center">
+      <Image
+        src={vandfald}
+        alt="Et vandfald"
+        class="rounded-[30px] w-[300px] h-[600px] object-cover mt-[50px]"
+      />
+      <p class="poppins-light text-center text-[24px] mt-[20px] md:text-[18px]">
+        AUSTRALIEN, NZ, BALI & GILI ISLANDS
+      </p>
+    </div>
 
-  <Image
-    src={by}
-    alt="Plastic Change logo"
-    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
-  />
-  <p class="poppins text-center text-[24px] mt-[20px]">
-    INDIEN, NEPAL, THAILAND, VIETNAM & SRI LANKA
-  </p>
+    <!-- Tredje billede (Strandhotel) -->
+    <div class="text-center">
+      <Image
+        src={strandhotel}
+        alt="En strand og natur ved en masse bygninger"
+        class="rounded-[30px] w-[300px] h-[600px] object-cover mt-[50px]"
+      />
+      <p class="poppins-light text-center text-[24px] mt-[20px] md:text-[18px]">
+        COSTA RICA, MEXICO & COLOMBIA
+      </p>
+    </div>
+
+    <!-- Fjerde billede (By) -->
+    <div class="text-center">
+      <Image
+        src={by}
+        alt="En masse trafik i byen"
+        class="rounded-[30px] w-[300px] h-[600px] object-cover mt-[50px]"
+      />
+      <p class="poppins-light text-center text-[24px] mt-[20px] md:text-[18px]">
+        INDIEN, NEPAL, THAILAND, VIETNAM & SRI LANKA
+      </p>
+    </div>
+  </div>
 </div>
