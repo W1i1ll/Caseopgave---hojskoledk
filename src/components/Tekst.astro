@@ -1,12 +1,18 @@
 ---
 import { Image } from "astro:assets";
 import tucan from "../assets/images/tucan.jpg";
-import vandfald from "../assets/images/vandfald.jpg";
-import strandhotel from "../assets/images/strandhotel.jpg";
-import by from "../assets/images/by.jpg";
+import tekst1 from "../assets/images/tekst1.jpeg";
+import tekst2 from "../assets/images/tekst2.jpeg";
+import tekst3 from "../assets/images/tekst3.jpg";
 ---
 
-<Image src={tucan} alt="Plastic Change logo" class="rounded-[30px]" />
+<div class="flex justify-center mt-10">
+  <Image
+    src={tekst1}
+    alt="En gruppe unge mennesker tager et selfie"
+    class="rounded-[30px] w-[450px] h-[450px] object-cover"
+  />
+</div>
 <h1 class="text-[32px] text-center mt-[35px]">
   Højskole i udlandet for unge mennesker
 </h1>
@@ -20,7 +26,13 @@ import by from "../assets/images/by.jpg";
   Nepal eller Costa Rica.
 </p>
 
-<Image src={tucan} alt="Plastic Change logo" class="rounded-[30px]" />
+<div class="flex justify-center mt-10">
+  <Image
+    src={tekst2}
+    alt="En gruppe unger mennesker får vand i hovedet"
+    class="rounded-[30px] w-[450px] h-[450px] object-cover"
+  />
+</div>
 <h1 class="text-[32px] text-center mt-[35px]">
   Uforglemmeligt højskoleophold i udlandet
 </h1>
@@ -33,8 +45,13 @@ import by from "../assets/images/by.jpg";
   på studie eller job. De længere ophold er oplagte for dig, der holder sabbatår
   og drømmer om at opleve verden og styrke dig selv personligt.
 </p>
-
-<Image src={tucan} alt="Plastic Change logo" class="rounded-[30px]" />
+<div class="flex justify-center mt-10">
+  <Image
+    src={tekst3}
+    alt="En grupep unge mennesker stikker hovedet ud af en bus "
+    class="rounded-[30px] w-[450px] h-[450px] object-cover"
+  />
+</div>
 <h1 class="text-[32px] text-center mt-[35px]">
   En rejse højskole fyldt med oplevelser
 </h1>

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import tucan from "../assets/images/tucan.jpg";
+
 import vandfald from "../assets/images/vandfald.jpg";
 import strandhotel from "../assets/images/strandhotel.jpg";
 import by from "../assets/images/by.jpg";
@@ -10,22 +11,38 @@ import by from "../assets/images/by.jpg";
   class="relative w-full bg-gradient-to-br from-[#FC9330] via-[#FFC895] to-[#FFC895] p-8"
 >
   <h1 class="text-[32px] text-center mt-[35px] text-black">Vores rejser</h1>
-  <Image src={tucan} alt="Plastic Change logo" class="rounded-[30px]" />
+  <Image
+    src={tucan}
+    alt="Plastic Change logo"
+    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
+  />
   <p class="poppins text-center text-[24px] mt-[20px]">
     CARIBIEN, HAWAII & MEXICO
   </p>
 
-  <Image src={vandfald} alt="Plastic Change logo" class="rounded-[30px]" />
+  <Image
+    src={vandfald}
+    alt="Plastic Change logo"
+    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
+  />
   <p class="poppins text-center text-[24px] mt-[20px]">
     AUSTRALIEN, NZ, BALI & GILI ISLANDS
   </p>
 
-  <Image src={strandhotel} alt="Plastic Change logo" class="rounded-[30px]" />
+  <Image
+    src={strandhotel}
+    alt="Plastic Change logo"
+    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
+  />
   <p class="poppins text-center text-[24px] mt-[20px]">
     COSTA RICA, MEXICO & COLOMBIA
   </p>
 
-  <Image src={by} alt="Plastic Change logo" class="rounded-[30px]" />
+  <Image
+    src={by}
+    alt="Plastic Change logo"
+    class="rounded-[30px] w-[300pxpx] h-[600px] object-cover"
+  />
   <p class="poppins text-center text-[24px] mt-[20px]">
     INDIEN, NEPAL, THAILAND, VIETNAM & SRI LANKA
   </p>
