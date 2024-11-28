@@ -1,3 +1,12 @@
+---
+import { Image } from "astro:assets";
+import Facebook from "../assets/images/Facebook.png";
+import instagram from "../assets/images/instagram.png";
+import YouTube from "../assets/images/YouTube.png";
+import LinkedIn from "../assets/images/LinkedIn.png";
+---
+
+
 <footer class="bg-[#fce8cf] py-8">
     <div class="container mx-auto flex flex-wrap justify-between items-start">
       <!-- Højskolendk Section -->
@@ -17,7 +26,8 @@
         <div class="flex space-x-4 mt-4">
           <!-- Social Media Icons (using PNG images) -->
           <a href="https://facebook.com" target="_blank">
-            <img src="/src/assets/images/Facebook.png" alt="Facebook" class="w-8 h-8"/>
+            <Image
+            src={Facebook} alt="Facebook" class="w-8 h-8"/>
           </a>
           <a href="https://instagram.com" target="_blank">
             <img src="/src/assets/images/instagram.png" alt="Instagram" class="w-8 h-8"/>
