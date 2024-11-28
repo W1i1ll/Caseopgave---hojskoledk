@@ -1,3 +1,10 @@
+---
+import { Image } from "astro:assets";
+import laura from "../assets/images/laura.png";
+import soren from "../assets/images/soren.png";
+import emma from "../assets/images/emma.png";
+---
+
 <div class="bg-gray-50 py-12">
     <div class="text-center mb-12">
       <h2 class="text-3xl font-bold text-gray-800">Tidligere rejsende</h2>
@@ -6,8 +13,8 @@
     <div class="space-y-8 max-w-4xl mx-auto">
       <!-- Testimonial 1 -->
       <div class="flex flex-col md:flex-row items-center bg-orange-100 p-6 rounded-lg shadow-md">
-        <img 
-          src="/src/assets/images/laura.png" 
+        <Image
+            src={laura}
           alt="Laura Ovidia Sofie Pedersen" 
           class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md object-cover"
         />
@@ -23,8 +30,8 @@
   
       <!-- Testimonial 2 -->
       <div class="flex flex-col md:flex-row items-center bg-orange-100 p-6 rounded-lg shadow-md">
-        <img 
-          src="/src/assets/images/soren.png" 
+        <Image
+            src={soren}
           alt="Søren Schmidt" 
           class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md object-cover"
         />
@@ -40,8 +47,8 @@
   
       <!-- Testimonial 3 -->
       <div class="flex flex-col md:flex-row items-center bg-orange-100 p-6 rounded-lg shadow-md">
-        <img 
-          src="/src/assets/images/emma.png" 
+        <Image
+            src={emma}
           alt="Emma Jo Sørensen" 
           class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-md object-cover"
         />
