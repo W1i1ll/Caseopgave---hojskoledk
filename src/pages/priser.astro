@@ -5,6 +5,11 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Card from "../components/Card.astro";
 import priserhero from "../assets/images/priserhero.jpg";
+import Footer from "../components/Footer.astro";
+import priser1 from "../assets/images/priser1.svg";
+import priser2 from "../assets/images/priser2.svg";
+import priser3 from "../assets/images/priser3.svg";
+import priser4 from "../assets/images/priser4.svg";
 ---
 
 <MainLayout />
@@ -29,7 +34,7 @@ import priserhero from "../assets/images/priserhero.jpg";
 <div
   class="w-full bg-gradient-to-br from-[#FC9330] via-[#FFC895] to-[#FFC895] p-9"
 >
-  <h2 class="mt-4 m-12 knewave text-[25px] text-center md:text-[32px] md:px-80">
+  <h2 class="m-10 knewave text-[25px] text-center md:text-[32px] md:px-80">
     Her får du et klart overblik over vores eventyrlige højskoleophold i
     udlandet.
   </h2>
@@ -42,3 +47,79 @@ import priserhero from "../assets/images/priserhero.jpg";
 <Card />
 <Card />
 <Card />
+
+<div
+  class="w-full bg-gradient-to-br from-[#FC9330] via-[#FFC895] to-[#FFC895] p-4"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-8 mt-20">
+    <div class="p-6 flex flex-col items-center justify-between h-full">
+      <Image
+        src={priser1}
+        alt="Højskolepriser"
+        class="w-16 h-16 mb-4 mx-auto"
+      />
+      <h1 class="text-[32px] poppins-bold text-black mb-4 text-center">
+        Højskolepriser
+      </h1>
+      <p class="text-[18px] poppins text-black">
+        Vi har samlet alle vores eventyrlige ophold og rejser her for at give
+        dig et godt overblik. På destinationssiderne kan du læse mere om
+        aktiviteter, program, undervisning, transport, friuger, lommepenge og
+        meget mere.
+      </p>
+    </div>
+
+    <div class="p-6 flex flex-col items-center justify-between h-full">
+      <Image
+        src={priser2}
+        alt="Hvad koster et højskoleophold"
+        class="w-16 h-16 mb-4 mx-auto"
+      />
+      <h1 class="text-[32px] poppins-bold text-black mb-4 text-center">
+        Hvad koster et højskoleophold
+      </h1>
+      <p class="text-[18px] poppins text-black">
+        Priserne for vores højskoleophold varierer afhængigt af længde,
+        destinationer, aktiviteter, indkvartering og transport. Indkvartering i
+        friuger er ikke inkluderet, da eleverne typisk rejser ud, og det giver
+        mening at undgå betaling for tomme værelser.
+      </p>
+    </div>
+
+    <div class="p-6 flex flex-col items-center justify-between h-full">
+      <Image
+        src={priser3}
+        alt="Tilskud til højskoleophold"
+        class="w-16 h-16 mb-4 mx-auto"
+      />
+      <h1 class="text-[32px] poppins-bold text-black mb-4 text-center">
+        Tilskud til højskoleophold
+      </h1>
+      <p class="text-[18px] poppins text-black">
+        Vi kender ikke til tidligere elever, der har fået tilskud til vores
+        højskoleophold, men du kan undersøge mulighederne i din kommune. De
+        fleste sparer op via job, og vi anbefaler at gøre det på forhånd, så
+        økonomien ikke bekymrer under opholdet.
+      </p>
+    </div>
+
+    <div class="p-6 flex flex-col items-center justify-between h-full">
+      <Image
+        src={priser4}
+        alt="Legater til højskoler"
+        class="w-16 h-16 mb-4 mx-auto"
+      />
+      <h1 class="text-[32px] poppins-bold text-black mb-4 text-center">
+        Legater til højskoler
+      </h1>
+      <p class="text-[18px] poppins text-black">
+        Der findes mange forskellige legater, til forskellige formål, man kan
+        søge. Også til højskoleophold. Det kan eksempelvis være lokale
+        foreninger eller private personer der tilbyder det. Du kan læse mere om
+        legater til højskole på legatmidler.dk og legatbogen.dk.
+      </p>
+    </div>
+  </div>
+</div>
+
+<Footer />
