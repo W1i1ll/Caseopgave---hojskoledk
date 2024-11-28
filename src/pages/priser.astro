@@ -4,15 +4,41 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Card from "../components/Card.astro";
+import priserhero from "../assets/images/priserhero.jpg";
 ---
 
 <MainLayout />
+<div class="relative w-full h-full">
+  <Image
+    src={priserhero}
+    alt="En strand med palmer"
+    class="w-full h-full object-cover"
+  />
+
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+
+  <div
+    class="absolute inset-0 flex items-center justify-center text-white flex-col"
+  >
+    <h1 class="text-[30px] knewave text-center md:text-[96px]">
+      Priser - højskole i udlandet
+    </h1>
+  </div>
+</div>
+
 <div
   class="w-full bg-gradient-to-br from-[#FC9330] via-[#FFC895] to-[#FFC895] p-9"
 >
-  <h1>
+  <h2 class="mt-4 m-12 knewave text-[25px] text-center md:text-[32px] md:px-80">
     Her får du et klart overblik over vores eventyrlige højskoleophold i
     udlandet.
-  </h1>
+  </h2>
 </div>
+<Card />
+<Card />
+<Card />
+<Card />
+<Card />
+<Card />
+<Card />
 <Card />

@@ -3,16 +3,14 @@ import cardbillede from "../assets/images/hawaii.webp";
 import { Image } from "astro:assets";
 ---
 
-<div class="bg-[#F9F9F9] rounded-lg flex overflow-hidden mx-8">
-  <!-- Left Image -->
+<div class="bg-[#F9F9F9] rounded-lg flex overflow-hidden mx-8 mt-20">
   <Image
     src={cardbillede}
     alt="En gruppe unge tager et selfie i vandet"
-    class="w-1/2 object-cover"
+    class="w-2/5 object-cover"
   />
 
-  <!-- Right Content -->
-  <div class="w-1/2 p-6 flex flex-col justify-between">
+  <div class="w-3/5 p-6 flex flex-col justify-between">
     <div>
       <h2 class="text-[34px] poppins-bold text-black mb-4">
         Højskole i Carabien, Hawaii & Mexico
@@ -22,36 +20,33 @@ import { Image } from "astro:assets";
           >UDSOLGT</span
         >
       </p>
-      <p class="text-20px] poppins-bold text-black mt-4">
+      <p class="text-20px poppins-bold text-black mt-4">
         Pris pr. person: 63.500kr
       </p>
     </div>
 
-    <!-- Dates and Buttons Container -->
-    <div class="flex justify-between items-end mt-6">
-      <!-- Dates -->
-      <div class="flex gap-8">
+    <div class="flex justify-between items-center mt-6 gap-8">
+      <div class="flex gap-12">
         <div class="text-left">
           <span class="block text-sm poppins text-black"
             >Afrejse fra Danmark</span
           >
-          <span class="text-gray-800 poppins-bold">6. Januar 2025</span>
+          <span class="block text-[#FF0000] poppins-bold">6. Januar 2025</span>
         </div>
         <div class="text-left">
           <span class="block text-sm poppins text-black">Hjemrejse</span>
-          <span class="text-black poppins-bold">7. Marts 2025</span>
+          <span class="block text-[#FF0000] poppins-bold">7. Marts 2025</span>
         </div>
       </div>
 
-      <!-- Buttons -->
       <div class="flex gap-4">
         <button
-          class="bg-[#FFAB34] hover:bg-[#E69A30] text-white poppins-bold rounded-[15px] px-6 py-2"
+          class="bg-[#FFAB34] hover:bg-[#E69A30] text-white poppins-bold text-sm px-6 py-3 rounded-[15px]"
         >
           Tilmeld til infomøde
         </button>
         <button
-          class="bg-[#2E9900] hover:bg-[#427c29] text-white poppins-bold rounded-[15px] px-6 py-2"
+          class="bg-[#2E9900] hover:bg-[#427c29] text-white poppins-bold text-sm rounded-[15px] px-6 py-4"
         >
           Reserver en plads
         </button>
